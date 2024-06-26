@@ -1,9 +1,9 @@
-import { Box, Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
-import { useCallback } from 'react';
-import { useDropzone, FileWithPath } from 'react-dropzone';
+import { Box, Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import { useCallback } from "react";
+import { useDropzone, FileWithPath } from "react-dropzone";
 
-import AddFiles from './icons/addFiles';
+import AddFiles from "../../public/Icons/addFiles";
 
 interface DropzoneComponentProps {
   uploadText: string;
@@ -21,7 +21,7 @@ const CustomDropzoneBox: React.FC<DropzoneComponentProps> = ({
   borderColor = "#D1D5DB",
   textColor = "#6B7280",
   iconColor = "#9CA3AF",
-  fileSizeLimitText = '10MB'
+  fileSizeLimitText = "10MB",
 }) => {
   const theme = useTheme();
 
@@ -36,21 +36,25 @@ const CustomDropzoneBox: React.FC<DropzoneComponentProps> = ({
       {...getRootProps()}
       sx={{
         border: `2px dashed ${borderColor}`,
-        textAlign: 'center',
-        cursor: 'pointer',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
+        textAlign: "center",
+        cursor: "pointer",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
         p: 4,
-        color: textColor
+        color: textColor,
       }}
     >
       <input {...getInputProps()} />
       <AddFiles width={48} height={48} color={iconColor} />
       <Typography variant="body2" fontWeight="500">
         <Typography
-          component='span' variant="body2" fontWeight="500" color={theme.palette.primary.main} marginRight={0.5}
+          component="span"
+          variant="body2"
+          fontWeight="500"
+          color={theme.palette.primary.main}
+          marginRight={0.5}
         >
           {uploadText}
         </Typography>
@@ -58,10 +62,9 @@ const CustomDropzoneBox: React.FC<DropzoneComponentProps> = ({
       </Typography>
       <Typography variant="caption" color={textColor}>
         {`${fileTypesText} ${fileSizeLimitText}`}
-
       </Typography>
     </Box>
   );
-}
+};
 
 export default CustomDropzoneBox;
