@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import CustomTextField from "@/components/CustomTextField";
+import { Wrapper } from "./Wrapper";
 
 const meta: Meta<typeof CustomTextField> = {
   title: "CustomTextField",
@@ -13,7 +14,12 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const CustomPopoverStory: Story = {
+export const CustomTextFieldStory: Story = {
+  render: (args) => (
+    <Wrapper>
+      <CustomTextField {...args} />
+    </Wrapper>
+  ),
   args: {
     label: "Lorem ipsum",
     placeholder: "Lorem ipsum...",
