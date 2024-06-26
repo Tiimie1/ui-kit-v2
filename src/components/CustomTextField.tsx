@@ -1,0 +1,69 @@
+import {
+  Box,
+  FormControl,
+  InputAdornment,
+  OutlinedInput,
+  Typography,
+} from "@mui/material";
+import React from "react";
+
+import CustomTooltip from "./CustomTooltip";
+
+interface CustomTextFieldProps {
+  label: string;
+  placeholder: string;
+  value?: string | number | boolean;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  tooltip?: string;
+  suffix?: string | React.ReactNode;
+  disabled?: boolean;
+  whiteBg?: boolean;
+  required?: boolean;
+  error?: boolean;
+}
+
+const CustomTextField: React.FC<CustomTextFieldProps> = ({
+  label,
+  placeholder,
+  value,
+  onChange,
+  tooltip,
+  suffix,
+  disabled = false,
+  whiteBg = false,
+  required = false,
+  error = false,
+}) => {
+  return (
+    <FormControl
+      variant="outlined"
+      fullWidth
+      disabled={disabled}
+      required={required}
+      error={error}
+    >
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          mb: 0.5,
+        }}
+      >
+        <Typography variant="caption" sx={{ opacity: 0.5 }}>
+          {label}
+        </Typography>
+        {tooltip && <CustomTooltip tooltipText={tooltip} />}
+      </Box>
+      <OutlinedInput
+        endAdornment={<InputAdornment position="end">{suffix}</InputAdornment>}
+        placeholder={placeholder}
+        value={value}
+        sx={{ backgroundColor: whiteBg ? "white" : "transparent" }}
+        onChange={onChange}
+      />
+    </FormControl>
+  );
+};
+
+export default CustomTextField;
