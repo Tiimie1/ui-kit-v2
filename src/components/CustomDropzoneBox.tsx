@@ -9,17 +9,17 @@ interface DropzoneComponentProps {
   uploadText: string;
   dragText: string;
   fileTypesText: string;
-  borderColor?: string; 
+  borderColor?: string;
   textColor?: string;
-  iconColor?: string; 
-  fileSizeLimitText?: string; 
+  iconColor?: string;
+  fileSizeLimitText?: string;
 }
 const CustomDropzoneBox: React.FC<DropzoneComponentProps> = ({
   uploadText = "Upload a file",
   dragText = "or drag and drop",
   fileTypesText = "PDF, DOC, JPG up to ",
   borderColor = "#D1D5DB",
-  textColor = "#6B7280", 
+  textColor = "#6B7280",
   iconColor = "#9CA3AF",
   fileSizeLimitText = '10MB'
 }) => {
@@ -36,11 +36,8 @@ const CustomDropzoneBox: React.FC<DropzoneComponentProps> = ({
       {...getRootProps()}
       sx={{
         border: `2px dashed ${borderColor}`,
-        padding: '20px',
         textAlign: 'center',
         cursor: 'pointer',
-        mt: 1,
-        mb: 2,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -51,17 +48,16 @@ const CustomDropzoneBox: React.FC<DropzoneComponentProps> = ({
     >
       <input {...getInputProps()} />
       <AddFiles width={48} height={48} color={iconColor} />
-      <Typography sx={{ fontWeight: 500, fontSize: 14 }}>
+      <Typography variant="body2" fontWeight="500">
         <Typography
-          component='span'
-          sx={{ fontWeight: 500, color: theme.palette.primary.main, mr: 0.5, fontSize: 14 }}
+          component='span' variant="body2" fontWeight="500" color={theme.palette.primary.main} marginRight={0.5}
         >
           {uploadText}
         </Typography>
         {dragText}
       </Typography>
-      <Typography fontSize={12} fontWeight={400} color={textColor}>
-      {`${fileTypesText} ${fileSizeLimitText}`}
+      <Typography variant="caption" color={textColor}>
+        {`${fileTypesText} ${fileSizeLimitText}`}
 
       </Typography>
     </Box>
