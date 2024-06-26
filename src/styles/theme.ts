@@ -54,8 +54,15 @@ const typography: ThemeOptions["typography"] = {
   },
 };
 
+const palette: ThemeOptions["palette"] = {
+  background: {
+    default: "#F8F9FC",
+  },
+};
+
 const theme = createTheme({
   typography,
+  palette,
 });
 
 export default theme;

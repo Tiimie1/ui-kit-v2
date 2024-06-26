@@ -63,7 +63,6 @@ const ChainCard: React.FC<ChainCardProps> = ({
       <Box
         sx={{
           padding: 2,
-          paddingBottom: 0,
           margin: 1.5,
           borderRadius: 3,
           backgroundColor: theme.palette.background.default,
