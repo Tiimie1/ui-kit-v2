@@ -13,7 +13,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const CustomPopoverStory: Story = {
+export const CustomTooltipStory: Story = {
   args: {
     tooltipText:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus varius sem at tellus tempor ultricies",
