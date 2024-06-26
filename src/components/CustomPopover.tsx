@@ -37,7 +37,6 @@ const PopoverWithArrow = (
             position: "absolute",
             top: 0,
             right: 20,
-            //left: 20,
             width: 10,
             height: 10,
             backgroundColor: "inherit",
