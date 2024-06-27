@@ -1,11 +1,12 @@
 import { Box, Typography } from '@mui/material';
-import { Diamond } from '@mui/icons-material';
+import AddFiles from '../../public/Icons/addFiles';
 
 interface CustomChartCircleInfoProps {
   numOfCreatedAsset: string | number;
+  label?: string;
 }
 
-const CustomChartCircleInfo: React.FC<CustomChartCircleInfoProps> = ({ numOfCreatedAsset }) => {
+const CustomChartCircleInfo: React.FC<CustomChartCircleInfoProps> = ({ numOfCreatedAsset, label = "Assets Created" }) => {
   return (
     <Box
       sx={{
@@ -15,12 +16,16 @@ const CustomChartCircleInfo: React.FC<CustomChartCircleInfoProps> = ({ numOfCrea
         transform: 'translate(-50%, -50%)',
         pointerEvents: 'none',
         padding: '4px',
-        textAlign: 'center'
+        textAlign: 'center',
+        whiteSpace: 'nowrap',  
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
       }}
     >
-      <Diamond fontSize="large" />
+      <AddFiles />
       <Typography variant='body2' fontWeight={500}>
-        Assets Created
+        {label}
       </Typography>
       <Typography variant='h3'>{numOfCreatedAsset}</Typography>
     </Box>
