@@ -4,6 +4,9 @@ import CustomPieChart from '@/components/CustomPieChart';
 export default {
   title: 'CustomPieChart',
   component: CustomPieChart,
+  parameters: {
+    layout: "centered",
+  },
 } as Meta<typeof CustomPieChart>;
 
 const Template: StoryFn<typeof CustomPieChart> = (args) => <CustomPieChart {...args} />;

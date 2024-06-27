@@ -4,6 +4,9 @@ import CustomChartCircleInfo from '@/components/CustomChartCircleInfo';
 export default {
   title: 'CustomChartCircleInfo',
   component: CustomChartCircleInfo,
+  parameters: {
+    layout: "centered",
+  },
 } as Meta<typeof CustomChartCircleInfo>;
 
 const Template: StoryFn<typeof CustomChartCircleInfo> = (args) => <CustomChartCircleInfo {...args} />;
