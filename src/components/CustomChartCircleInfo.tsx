@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import AddFiles from '../../public/Icons/addFiles';
+import DiamondIcon from '../../public/Icons/diamondIcon';
 
 interface CustomChartCircleInfoProps {
   numOfCreatedAsset: string | number;
@@ -23,7 +23,7 @@ const CustomChartCircleInfo: React.FC<CustomChartCircleInfoProps> = ({ numOfCrea
         alignItems: 'center',
       }}
     >
-      <AddFiles />
+      <DiamondIcon />
       <Typography variant='body2' fontWeight={500}>
         {label}
       </Typography>
