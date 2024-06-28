@@ -23,6 +23,11 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    docs: {
+      description: {
+        component: 'Documentation.',
+      },
+    },
   },
 };
 
