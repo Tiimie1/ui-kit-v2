@@ -1,4 +1,3 @@
-// .storybook/preview.ts
 import "../src/styles/globals.css";
 import type { Preview } from "@storybook/react";
 import { withThemeFromJSXProvider } from "@storybook/addon-themes";
