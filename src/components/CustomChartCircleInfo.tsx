@@ -24,10 +24,10 @@ const CustomChartCircleInfo: React.FC<CustomChartCircleInfoProps> = ({ numOfCrea
       }}
     >
       <DiamondIcon />
-      <Typography variant='body2' fontWeight={500}>
+      <Typography variant='body2' mt='5px' fontWeight={500}>
         {label}
       </Typography>
-      <Typography variant='h3'>{numOfCreatedAsset}</Typography>
+      <Typography variant='h3' mt='2px'>{numOfCreatedAsset}</Typography>
     </Box>
   );
 };
