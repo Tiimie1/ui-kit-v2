@@ -3,7 +3,7 @@ import { useTheme } from "@mui/material/styles";
 import { useCallback } from "react";
 import { useDropzone, FileWithPath } from "react-dropzone";
 
-import AddFiles from "../../public/Icons/addFiles";
+import AddFilesIcon from "@/Icons/addFilesIcon";
 
 interface DropzoneComponentProps {
   uploadText: string;
@@ -47,7 +47,7 @@ const CustomDropzoneBox: React.FC<DropzoneComponentProps> = ({
       }}
     >
       <input {...getInputProps()} />
-      <AddFiles width={48} height={48} color={iconColor} />
+      <AddFilesIcon width={48} height={48} color={iconColor} />
       <Typography variant="body2" fontWeight="500">
         <Typography
           component="span"

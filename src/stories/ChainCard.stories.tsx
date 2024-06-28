@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Wrapper } from "./Wrapper";
 import ChainCard from "@/components/ChainCard";
-import EthIcon from "../../public/Icons/ethIcon";
+import EthIcon from "@/Icons/ethIcon";
 import { Box, Grid } from "@mui/material";
 
 const meta: Meta<typeof ChainCard> = {

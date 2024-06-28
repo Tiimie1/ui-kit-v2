@@ -1,6 +1,6 @@
 import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material/styles';
-import CreateBtn from '../../public/Icons/createBtnIcon';
+import CreateBtnIcon from '@/Icons/createBtnIcon';
 import CustomTooltip from '@/components/CustomTooltip';
 
 interface CustomCreateButtonProps {
@@ -17,7 +17,7 @@ const CustomCreateButton: React.FC<CustomCreateButtonProps> = ({ label, color, o
     <div style={{ display: 'flex', alignItems: 'center' }}>
       <Button
         onClick={onClick}
-        startIcon={<CreateBtn color={color} />}
+        startIcon={<CreateBtnIcon color={color} />}
         sx={{
           color: color,
           ...theme.typography.body2

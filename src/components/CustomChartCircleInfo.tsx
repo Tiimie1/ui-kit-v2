@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import DiamondIcon from '../../public/Icons/diamondIcon';
+import DiamondIcon from '@/Icons/diamondIcon';
 
 interface CustomChartCircleInfoProps {
   numOfCreatedAsset: string | number;

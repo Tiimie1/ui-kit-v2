@@ -1,9 +1,9 @@
 import { Box, Button, IconButton, Typography } from '@mui/material';
 import { useState } from 'react';
 
-import CommunityIcon from '../../public/Icons/communityIcon';
-import CopyTemplateIcon from '../../public/Icons/copyTemplateIcon';
-import DotsIcon from '../../public/Icons/dotsIcon';
+import CommunityIcon from '@/Icons/communityIcon';
+import CopyTemplateIcon from '@/Icons/copyTemplateIcon';
+import DotsIcon from '@/Icons/dotsIcon';
 
 import CustomPopover from './CustomPopover';
 

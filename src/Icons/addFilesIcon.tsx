@@ -4,7 +4,7 @@ interface IconsType {
   color?: string;
 }
 
-const AddFiles: React.FC<IconsType> = ({
+const AddFilesIcon: React.FC<IconsType> = ({
   width = 48,
   height = 48,
   color = '#9CA3AF'
@@ -26,4 +26,4 @@ const AddFiles: React.FC<IconsType> = ({
   </svg>
 );
 
-export default AddFiles;
+export default AddFilesIcon;
