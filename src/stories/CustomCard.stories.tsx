@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import CustomCard from "@/components/CustomCard";
-import CommunityIcon from '../../public/Icons/communityIcon'; 
+import CommunityIcon from "@/Icons/communityIcon";
 
 const meta: Meta<typeof CustomCard> = {
   title: "CustomCard",

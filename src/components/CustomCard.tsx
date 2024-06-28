@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useTheme } from '@mui/material';
 import { ReactNode } from 'react';
 
 interface CustomCardProps {
@@ -14,13 +14,15 @@ const CustomCard: React.FC<CustomCardProps> = ({
   description,
   onSelect,
   icon,
-  backgroundColor = '#ffffff'
+  backgroundColor
 }) => {
+  const theme = useTheme();
+
   return (
     <Box
       sx={{
         borderRadius: '16px',
-        background: backgroundColor,
+        background: backgroundColor || theme.palette.background.default,
         padding: 2,
         cursor: 'pointer'
       }}
@@ -34,7 +36,7 @@ const CustomCard: React.FC<CustomCardProps> = ({
           <Typography variant='body1' fontWeight={500}>
             {title}
           </Typography>
-          <Typography variant='caption' sx={{ color: '#6B7280' }}>
+          <Typography variant='caption' sx={{ color: theme.palette.text.secondary }}>
             {description}
           </Typography>
         </Box>

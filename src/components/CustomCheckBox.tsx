@@ -1,5 +1,5 @@
 import CheckIcon from "@mui/icons-material/Check";
-import { Box } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import React from "react";
 
 interface CustomCheckBoxProps {
@@ -12,6 +12,8 @@ const CustomCheckBox: React.FC<CustomCheckBoxProps> = ({
   checkState,
   completedState,
 }) => {
+  const theme = useTheme();
+
   return (
     <Box sx={{ position: "relative", cursor: "pointer" }}>
       <input
@@ -21,7 +23,7 @@ const CustomCheckBox: React.FC<CustomCheckBoxProps> = ({
           width: "32px",
           height: "32px",
           borderRadius: "16px",
-          border: `2px solid ${checkState ? "#4F46E5" : "#D1D5DB"}`,
+          border: `2px solid ${checkState ? theme.palette.primary.main : theme.palette.grey[300]}`,
           appearance: "none",
           display: "flex",
           justifyContent: "center",
@@ -40,7 +42,7 @@ const CustomCheckBox: React.FC<CustomCheckBoxProps> = ({
             width: "10px",
             height: "10px",
             borderRadius: "50%",
-            backgroundColor: "#4F46E5",
+            backgroundColor: theme.palette.primary.main,
           }}
         />
       )}
@@ -54,12 +56,12 @@ const CustomCheckBox: React.FC<CustomCheckBoxProps> = ({
             width: "32px",
             height: "32px",
             borderRadius: "50%",
-            backgroundColor: "#4F46E5",
+            backgroundColor: theme.palette.primary.main,
           }}
         >
           <CheckIcon
             sx={{
-              color: "white",
+              color: theme.palette.common.white,
               position: "absolute",
               top: "50%",
               left: "50%",

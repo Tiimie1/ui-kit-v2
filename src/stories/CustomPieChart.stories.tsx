@@ -11,8 +11,8 @@ export default {
 
 const Template: StoryFn<typeof CustomPieChart> = (args) => <CustomPieChart {...args} />;
 
-export const CustomPieChartWithoutInfo = Template.bind({});
-CustomPieChartWithoutInfo.args = {
+export const Default = Template.bind({});
+Default.args = {
   graphData: [
     { name: 'Group A', value: 400 },
     { name: 'Group B', value: 400 },
@@ -21,8 +21,8 @@ CustomPieChartWithoutInfo.args = {
   showInfo: false, 
 };
 
-export const CustomPieChartWithInfo = Template.bind({});
-CustomPieChartWithInfo.args = {
+export const WithInfo = Template.bind({});
+WithInfo.args = {
   graphData: [
     { name: 'Group A', value: 500 },
     { name: 'Group B', value: 300 },

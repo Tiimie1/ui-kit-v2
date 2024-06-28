@@ -58,6 +58,59 @@ const palette: ThemeOptions["palette"] = {
   background: {
     default: "#F8F9FC",
   },
+  primary: {
+    main: "#4F4FC3",
+    light: "#63a4ff",
+    dark: "#004ba0",
+    contrastText: "#fff",
+  },
+  secondary: {
+    main: "#dc004e",
+    light: "#ff5c8d",
+    dark: "#9a0036",
+    contrastText: "#fff",
+  },
+  error: {
+    main: "#f44336",
+    light: "#e57373",
+    dark: "#d32f2f",
+    contrastText: "#fff",
+  },
+  warning: {
+    main: "#ffa726",
+    light: "#ffb74d",
+    dark: "#f57c00",
+    contrastText: "#fff",
+  },
+  info: {
+    main: "#2196f3",
+    light: "#64b5f6",
+    dark: "#1976d2",
+    contrastText: "#fff",
+  },
+  success: {
+    main: "#4caf50",
+    light: "#81c784",
+    dark: "#388e3c",
+    contrastText: "#fff",
+  },
+  grey: {
+    50: "#fafafa",
+    100: "#f5f5f5",
+    200: "#eeeeee",
+    300: "#e0e0e0",
+    400: "#bdbdbd",
+    500: "#9e9e9e",
+    600: "#757575",
+    700: "#616161",
+    800: "#424242",
+    900: "#212121",
+  },
+  text: {
+    primary: "#212121",
+    secondary: "#757575",
+    disabled: "#bdbdbd",
+  },
 };
 
 const theme = createTheme({

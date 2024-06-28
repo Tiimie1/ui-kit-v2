@@ -1,8 +1,6 @@
 import { IconButton, Tooltip, useTheme } from "@mui/material";
-
 import React from "react";
-
-import TooltipIcon from "../../public/Icons/tooltipIcon";
+import TooltipIcon from "@/Icons/tooltipIcon";
 
 interface CustomTooltipProps {
   tooltipText: string;
@@ -29,7 +27,7 @@ const CustomTooltip: React.FC<CustomTooltipProps> = ({ tooltipText }) => {
         }}
       >
         <IconButton>
-          <TooltipIcon color="#A8B0B6" />
+          <TooltipIcon color={theme.palette.grey[500]} />
         </IconButton>
       </Tooltip>
     </>

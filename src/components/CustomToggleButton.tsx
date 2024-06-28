@@ -1,4 +1,4 @@
-import { Box, ToggleButton, Typography } from "@mui/material";
+import { Box, ToggleButton, Typography, useTheme } from "@mui/material";
 import ToggleButtonGroup, {
   toggleButtonGroupClasses,
 } from "@mui/material/ToggleButtonGroup";
@@ -23,6 +23,8 @@ const CustomToggleButton: React.FC<CustomToggleButtonProps> = ({
   onChange = () => {},
   toggleButtonOptions,
 }) => {
+  const theme = useTheme();
+
   const handleToggle = (
     event: React.MouseEvent<HTMLElement>,
     newValue: string,
@@ -39,22 +41,23 @@ const CustomToggleButton: React.FC<CustomToggleButtonProps> = ({
         border: 0,
       },
     },
-    [`& .${toggleButtonGroupClasses.middleButton},& .${toggleButtonGroupClasses.lastButton}`]:
-      {
-        marginLeft: -1,
-        borderLeft: "1px solid transparent",
-      },
+    [`& .${toggleButtonGroupClasses.middleButton},& .${toggleButtonGroupClasses.lastButton}`]: {
+      marginLeft: -1,
+      borderLeft: "1px solid transparent",
+    },
   }));
 
   return (
     <Box>
-      <Typography variant="caption">{label}</Typography>
+      <Typography variant="caption" sx={{ color: theme.palette.text.primary }}>
+        {label}
+      </Typography>
       <Box
         width={"100%"}
         sx={{
           display: "flex",
-          border: `1px solid lightgrey`,
-          borderRadius: "4px",
+          border: `1px solid ${theme.palette.grey[300]}`,
+          borderRadius: theme.shape.borderRadius,
         }}
       >
         <StyledToggleButtonGroup

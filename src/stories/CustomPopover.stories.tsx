@@ -22,7 +22,7 @@ const popoverItems = [
   { text: "Delete", icon: <DeleteIcon /> },
 ];
 
-export const CustomPopoverStory: Story = {
+export const Default: Story = {
   args: {
     items: popoverItems,
     anchorEl: document.createElement("button"),

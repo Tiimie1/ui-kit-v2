@@ -11,8 +11,8 @@ export default {
 
 const Template: StoryFn<typeof CustomChartCircleInfo> = (args) => <CustomChartCircleInfo {...args} />;
 
-export const CustomChartCircleInfoStory = Template.bind({});
-CustomChartCircleInfoStory.args = {
+export const Default = Template.bind({});
+Default.args = {
   numOfCreatedAsset: 14,
   label: 'Assets Created',
 };

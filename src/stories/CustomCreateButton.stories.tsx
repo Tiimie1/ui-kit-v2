@@ -13,14 +13,14 @@ export default {
 
 const Template: StoryFn<typeof CustomCreateButton> = (args) => <CustomCreateButton {...args} />;
 
-export const CustomCreateButtonWithoutTooltip = Template.bind({});
-CustomCreateButtonWithoutTooltip.args = {
+export const Default = Template.bind({});
+Default.args = {
   label: 'Create SPV',
   color: '#5F66FF',
 };
 
-export const CustomCreateButtonWithTooltip = Template.bind({});
-CustomCreateButtonWithTooltip.args = {
+export const WithTooltip = Template.bind({});
+WithTooltip.args = {
   label: 'Create SPV',
   color: '#5F66FF',
   tooltipText: 'This is a tooltip text',

@@ -1,4 +1,8 @@
 import { Box, Typography, useTheme } from "@mui/material";
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import CircleIcon from '@mui/icons-material/Circle';
 
 interface ChainCardProps {
   title: string;
@@ -9,7 +13,7 @@ interface ChainCardProps {
   onClick: () => void;
 }
 
-const ChainCard: React.FC<ChainCardProps> = ({
+const CustomChainCard: React.FC<ChainCardProps> = ({
   title,
   description,
   mainBenefits,
@@ -28,7 +32,7 @@ const ChainCard: React.FC<ChainCardProps> = ({
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        backgroundColor: "white",
+        backgroundColor: theme.palette.common.white,
         cursor: "pointer",
         border: selected ? `2px solid ${theme.palette.primary.main}` : "",
       }}
@@ -42,19 +46,19 @@ const ChainCard: React.FC<ChainCardProps> = ({
           gap: 1.5,
         }}
       >
-        <Box sx={{ mt: 2, display: "flex", justifyContent: "center" }}>
+        <Box sx={{ mt: 5, display: "flex", justifyContent: "center" }}>
           {customIcon}
         </Box>
-        <Typography variant="body2" fontWeight={700}>
+        <Typography variant="body2" sx={{ fontWeight: 700 }}>
           {title}
         </Typography>
         <Typography
           variant="body2"
           sx={{
-            color: "#6B7280",
-            pr: 10,
-            pl: 10,
-            mb: 2,
+            color: theme.palette.text.secondary,
+            pr: '20%',
+            pl: '20%',
+            mb: 2
           }}
         >
           {description}
@@ -68,25 +72,37 @@ const ChainCard: React.FC<ChainCardProps> = ({
           backgroundColor: theme.palette.background.default,
         }}
       >
-        <Typography sx={{ fontSize: "12px", fontWeight: 700 }}>
+        <Typography variant="caption" sx={{ fontWeight: 700 }}>
           MAIN BENEFITS
         </Typography>
         <Box
           sx={{
-            fontSize: "14px",
-            fontWeight: 400,
-            color: "#6B7280",
+            marginTop: '6px'
           }}
         >
-          <ul style={{ paddingLeft: "20px" }}>
+          <List>
             {mainBenefits.map((benefit, index) => (
-              <li key={index}>{benefit}</li>
+              <ListItem key={index} sx={{ padding: "0 0 6px 8px" }}>
+                  <ListItemIcon sx={{ minWidth: '14px' }}>
+                <CircleIcon sx={{ fontSize: '4px' }} />
+                </ListItemIcon>
+                <Typography
+                  sx={{
+                    fontSize: theme.typography.body2.fontSize,
+                    fontWeight: theme.typography.body2.fontWeight,
+                    color: theme.palette.text.secondary,
+                  }}
+                >
+                  {benefit}
+                </Typography>
+              </ListItem>
             ))}
-          </ul>
+          </List>
         </Box>
+
       </Box>
     </Box>
   );
 };
 
-export default ChainCard;
+export default CustomChainCard;

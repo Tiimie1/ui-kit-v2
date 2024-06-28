@@ -19,7 +19,7 @@ const toggleButtonItems = [
   { label: "USDC", value: "usdc" },
 ];
 
-export const CustomToggleButtonStory: Story = {
+export const Default: Story = {
   render: (args) => (
     <Wrapper>
       <CustomToggleButton {...args} />

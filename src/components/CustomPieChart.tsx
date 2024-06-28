@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import { Cell, Pie, PieChart } from 'recharts';
 import CustomChartCircleInfo from './CustomChartCircleInfo';
 
@@ -19,8 +19,6 @@ interface CustomPieChartProps {
   showInfo?: boolean;
 }
 
-const COLORS = ['#26A66B', '#E0A225', '#5F66FF'];
-
 const CustomPieChart: React.FC<CustomPieChartProps> = ({
   graphData,
   cx = '50%',
@@ -32,6 +30,13 @@ const CustomPieChart: React.FC<CustomPieChartProps> = ({
   numOfCreatedAsset,
   showInfo = true 
 }) => {
+  const theme = useTheme();
+  const COLORS = [
+    theme.palette.success.main,
+    theme.palette.warning.main,
+    theme.palette.primary.main
+  ];
+
   return (
     <Box
       sx={{

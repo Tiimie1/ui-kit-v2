@@ -4,6 +4,7 @@ import {
   InputAdornment,
   OutlinedInput,
   Typography,
+  useTheme
 } from "@mui/material";
 import React from "react";
 
@@ -34,6 +35,8 @@ const CustomTextField: React.FC<CustomTextFieldProps> = ({
   required = false,
   error = false,
 }) => {
+  const theme = useTheme();
+
   return (
     <FormControl
       variant="outlined"
@@ -50,7 +53,7 @@ const CustomTextField: React.FC<CustomTextFieldProps> = ({
           mb: 0.5,
         }}
       >
-        <Typography variant="caption" sx={{ opacity: 0.5 }}>
+        <Typography variant="caption" sx={{ opacity: 0.5, color: theme.palette.text.primary }}>
           {label}
         </Typography>
         {tooltip && <CustomTooltip tooltipText={tooltip} />}
@@ -59,7 +62,7 @@ const CustomTextField: React.FC<CustomTextFieldProps> = ({
         endAdornment={<InputAdornment position="end">{suffix}</InputAdornment>}
         placeholder={placeholder}
         value={value}
-        sx={{ backgroundColor: whiteBg ? "white" : "transparent" }}
+        sx={{ backgroundColor: whiteBg ? theme.palette.common.white : "transparent" }}
         onChange={onChange}
       />
     </FormControl>

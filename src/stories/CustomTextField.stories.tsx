@@ -14,7 +14,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const CustomTextFieldStory: Story = {
+export const Default: Story = {
   render: (args) => (
     <Wrapper>
       <CustomTextField {...args} />
