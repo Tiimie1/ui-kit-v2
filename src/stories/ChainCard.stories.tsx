@@ -1,12 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Wrapper } from "./Wrapper";
-import ChainCard from "@/components/ChainCard";
+import CustomChainCard from "@/components/CustomChainCard";
 import EthIcon from "@/Icons/ethIcon";
-import { Box, Grid } from "@mui/material";
 
-const meta: Meta<typeof ChainCard> = {
-  title: "ChainCard",
-  component: ChainCard,
+const meta: Meta<typeof CustomChainCard> = {
+  title: "CustomChainCard",
+  component: CustomChainCard,
   parameters: {
     layout: "centered",
   },
@@ -16,7 +14,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const ChainCardStory: Story = {
+export const Default: Story = {
   args: {
     title: "Ethereum (ERC-20)",
     description:
