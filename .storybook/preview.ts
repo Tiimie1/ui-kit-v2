@@ -1,3 +1,4 @@
+// .storybook/preview.ts
 import "../src/styles/globals.css";
 import type { Preview } from "@storybook/react";
 import { withThemeFromJSXProvider } from "@storybook/addon-themes";
@@ -21,6 +22,11 @@ const preview: Preview = {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,
+      },
+    },
+    docs: {
+      description: {
+        component: 'Documentation.',
       },
     },
   },
