@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, Typography } from '@mui/material';
+import { Box, Button, IconButton, Typography, useTheme } from '@mui/material';
 import { useState } from 'react';
 
 import CommunityIcon from '@/Icons/communityIcon';
@@ -31,6 +31,7 @@ const CardWithHover: React.FC<TemplateCardProps> = ({
   maxWidth,
   onClick
 }) => {
+  const theme = useTheme();
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -45,7 +46,7 @@ const CardWithHover: React.FC<TemplateCardProps> = ({
     <Box
       sx={{
         borderRadius: '16px',
-        background: '#ffffff',
+        background: theme.palette.background.default,
         padding: 2,
         cursor: 'pointer',
         maxWidth: maxWidth, 
@@ -65,7 +66,7 @@ const CardWithHover: React.FC<TemplateCardProps> = ({
           <Typography variant='body1' fontWeight={500}>
             {title}
           </Typography>
-          <Typography variant='caption' sx={{ color: '#6B7280' }}>
+          <Typography variant='caption' sx={{ color: theme.palette.text.secondary }}>
             {description}
           </Typography>
         </Box>
