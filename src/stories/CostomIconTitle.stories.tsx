@@ -5,7 +5,7 @@ import AddFilesIcon from "@/Icons/addFilesIcon";
 import theme from "@/styles/theme";
 
 const meta: Meta<typeof CustomIconTitle> = {
-  title: "Components/CustomIconTitle",
+  title: "Titles/CustomIconTitle",
   component: CustomIconTitle,
   parameters: {
     layout: "centered",

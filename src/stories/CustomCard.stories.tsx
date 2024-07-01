@@ -4,7 +4,7 @@ import CustomCard from "@/components/CustomCard";
 import CommunityIcon from "@/Icons/communityIcon";
 
 const meta: Meta<typeof CustomCard> = {
-  title: "CustomCard",
+  title: "Cards/CustomCard",
   component: CustomCard,
   parameters: {
     layout: 'centered',

@@ -3,7 +3,7 @@ import CustomTextField from "@/components/CustomTextField";
 import { Wrapper } from "./Wrapper";
 
 const meta: Meta<typeof CustomTextField> = {
-  title: "CustomTextField",
+  title: "FormElements/CustomTextField",
   component: CustomTextField,
   parameters: {
     layout: "centered",

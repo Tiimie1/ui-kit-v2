@@ -3,7 +3,7 @@ import CustomChainCard from "@/components/CustomChainCard";
 import EthIcon from "@/Icons/ethIcon";
 
 const meta: Meta<typeof CustomChainCard> = {
-  title: "CustomChainCard",
+  title: "Cards/CustomChainCard",
   component: CustomChainCard,
   parameters: {
     layout: "centered",

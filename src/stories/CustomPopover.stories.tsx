@@ -5,7 +5,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 
 const meta: Meta<typeof CustomPopover> = {
-  title: "CustomPopover",
+  title: "FormElements/CustomPopover",
   component: CustomPopover,
   parameters: {
     layout: "centered",

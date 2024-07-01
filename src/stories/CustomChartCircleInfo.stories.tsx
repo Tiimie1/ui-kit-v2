@@ -2,7 +2,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import CustomChartCircleInfo from '@/components/CustomChartCircleInfo';
 
 export default {
-  title: 'CustomChartCircleInfo',
+  title: 'Charts/CustomChartCircleInfo',
   component: CustomChartCircleInfo,
   parameters: {
     layout: "centered",

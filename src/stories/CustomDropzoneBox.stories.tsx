@@ -4,7 +4,7 @@ import { Wrapper } from "./Wrapper";
 import theme from "@/styles/theme";
 
 const meta: Meta<typeof CustomDropzoneBox> = {
-  title: "CustomDropzoneBox",
+  title: "FormElements/CustomDropzoneBox",
   component: CustomDropzoneBox,
   parameters: {
     layout: "centered",

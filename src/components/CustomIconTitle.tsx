@@ -4,7 +4,7 @@ import React from 'react';
 interface CustomIconTitleProps {
   image?: React.ReactNode;  
   label: string;
-  color: string; // Add the color prop
+  color: string; 
 }
 
 const CustomIconTitle: React.FC<CustomIconTitleProps> = ({

@@ -2,7 +2,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import CustomCreateButton from '@/components/CustomCreateButton';
 
 export default {
-  title: 'CustomCreateButton',
+  title: 'FormElements/CustomCreateButton',
   component: CustomCreateButton,
   argTypes: {
     onClick: { action: 'clicked' },
