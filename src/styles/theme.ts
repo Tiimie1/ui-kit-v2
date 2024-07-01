@@ -61,38 +61,38 @@ const palette: ThemeOptions["palette"] = {
   primary: {
     main: "#4F4FC3",
     light: "#63a4ff",
-    dark: "#004ba0",
-    contrastText: "#fff",
+    dark: "#000000",
+    contrastText: "#ffffff",
   },
   secondary: {
     main: "#dc004e",
     light: "#ff5c8d",
     dark: "#9a0036",
-    contrastText: "#fff",
+    contrastText: "#ffffff",
   },
   error: {
     main: "#f44336",
     light: "#e57373",
     dark: "#d32f2f",
-    contrastText: "#fff",
+    contrastText: "#ffffff",
   },
   warning: {
     main: "#ffa726",
     light: "#ffb74d",
     dark: "#f57c00",
-    contrastText: "#fff",
+    contrastText: "#ffffff",
   },
   info: {
     main: "#2196f3",
     light: "#64b5f6",
     dark: "#1976d2",
-    contrastText: "#fff",
+    contrastText: "#ffffff",
   },
   success: {
     main: "#4caf50",
     light: "#81c784",
     dark: "#388e3c",
-    contrastText: "#fff",
+    contrastText: "#ffffff",
   },
   grey: {
     50: "#fafafa",
@@ -109,7 +109,7 @@ const palette: ThemeOptions["palette"] = {
   text: {
     primary: "#212121",
     secondary: "#757575",
-    disabled: "#bdbdbd",
+    disabled: "#bdbdbd"
   },
 };
 
