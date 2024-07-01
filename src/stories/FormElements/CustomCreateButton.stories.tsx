@@ -1,5 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react';
-import CustomCreateButton from '@/components/CustomCreateButton';
+import CustomCreateButton from '@/components/FormElements/CustomCreateButton';
 
 export default {
   title: 'FormElements/CustomCreateButton',

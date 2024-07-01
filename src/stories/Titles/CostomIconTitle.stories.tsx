@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import CustomIconTitle from "@/components/CustomIconTitle";
+import CustomIconTitle from "@/components/Titles/CustomIconTitle";
 import TitleIcon from "@/Icons/titleIcon";
 import AddFilesIcon from "@/Icons/addFilesIcon";
 import theme from "@/styles/theme";

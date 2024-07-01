@@ -1,5 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react';
-import CustomChartCircleInfo from '@/components/CustomChartCircleInfo';
+import CustomChartCircleInfo from '@/components/Charts/CustomChartCircleInfo';
 
 export default {
   title: 'Charts/CustomChartCircleInfo',

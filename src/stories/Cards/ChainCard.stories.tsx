@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import CustomChainCard from "@/components/CustomChainCard";
+import CustomChainCard from "@/components/Cards/CustomChainCard";
 import EthIcon from "@/Icons/ethIcon";
 
 const meta: Meta<typeof CustomChainCard> = {

@@ -5,7 +5,7 @@ import CommunityIcon from '@/Icons/communityIcon';
 import CopyTemplateIcon from '@/Icons/copyTemplateIcon';
 import DotsIcon from '@/Icons/dotsIcon';
 
-import CustomPopover from './CustomPopover';
+import CustomPopover from '../FormElements/CustomPopover';
 
 import EditIcon from '@mui/icons-material/Edit'
 import PoolIcon from '@mui/icons-material/Pool'

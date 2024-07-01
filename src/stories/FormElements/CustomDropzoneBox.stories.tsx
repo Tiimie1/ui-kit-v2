@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import CustomDropzoneBox from "@/components/CustomDropzoneBox";
+import CustomDropzoneBox from "@/components/FormElements/CustomDropzoneBox";
 import { Wrapper } from "./Wrapper";
 import theme from "@/styles/theme";
 

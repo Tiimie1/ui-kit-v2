@@ -1,5 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react';
-import CustomPieChart from '@/components/CustomPieChart';
+import CustomPieChart from '@/components/Charts/CustomPieChart';
 
 export default {
   title: 'Charts/CustomPieChart',

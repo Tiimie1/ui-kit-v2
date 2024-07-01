@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import CustomCheckBox from "@/components/CustomCheckBox";
+import CustomCheckBox from "@/components/FormElements/CustomCheckBox";
 
 const meta: Meta<typeof CustomCheckBox> = {
   title: "FormElements/CustomCheckBox",
