@@ -5,6 +5,7 @@ interface CustomIconTitleProps {
   image?: React.ReactNode;  
   label: string;
   color: string; 
+  colorIcon: string;
 }
 
 const CustomIconTitle: React.FC<CustomIconTitleProps> = ({

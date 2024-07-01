@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import CustomIconTitle from "@/components/Titles/CustomIconTitle";
-import TitleIcon from "@/Icons/titleIcon";
-import AddFilesIcon from "@/Icons/addFilesIcon";
+import MyAssetsIcon from "@/Icons/myAssetsIcon";
+import DashboardIcon from "@/Icons/dashboardIcon";
 import theme from "@/styles/theme";
 
 const meta: Meta<typeof CustomIconTitle> = {
@@ -20,7 +20,7 @@ const meta: Meta<typeof CustomIconTitle> = {
     image: {
       description: 'Icon or image to be displayed',
       control: 'select',
-      options: ['TitleIcon', 'AddFilesIcon'],
+      options: ['MyAssetsIcon', 'DashboardIcon'],
     },
     label: {
       control: 'text',
@@ -30,6 +30,10 @@ const meta: Meta<typeof CustomIconTitle> = {
       control: 'color',
       description: 'Color of the label text',
     },
+    colorIcon: {
+      control: 'color',
+      description: 'Color of the icon',
+    },
   },
 } satisfies Meta<typeof CustomIconTitle>;
 
@@ -37,31 +41,33 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const getImage = (image: 'TitleIcon' | 'AddFilesIcon', color: string): React.ReactNode => {
-  const iconProps = { width: 20, height: 20, color };
+const getImage = (image: 'MyAssetsIcon' | 'DashboardIcon', color: string): React.ReactNode => {
+  const iconProps = { width: 20, height: 20, colorIcon: 'red' };
   switch (image) {
-    case 'TitleIcon':
-      return <TitleIcon {...iconProps} />;
-    case 'AddFilesIcon':
-      return <AddFilesIcon {...iconProps} />;
+    case 'MyAssetsIcon':
+      return <MyAssetsIcon {...iconProps} />;
+    case 'DashboardIcon':
+      return <DashboardIcon {...iconProps} />;
     default:
-      return <TitleIcon {...iconProps} />;
+      return <MyAssetsIcon {...iconProps} />;
   }
 };
 
 export const Default: Story = {
   args: {
-    image: 'TitleIcon',
+    image: 'MyAssetsIcon',
     label: "Example Label",
     color: theme.palette.primary.dark,
+    colorIcon: 'green'
   },
-  render: ({ image, label, color }) => {
-    const icon = getImage(image as 'TitleIcon' | 'AddFilesIcon', theme.palette.primary.main);
+  render: ({ image, label, color, colorIcon }) => {
+    const icon = getImage(image as 'MyAssetsIcon' | 'DashboardIcon', theme.palette.primary.dark);
     return (
       <CustomIconTitle
         image={icon}
         label={label}
         color={color}
+        colorIcon={colorIcon}
       />
     );
   },
@@ -72,28 +78,13 @@ export const WithoutIcon: Story = {
     label: "Label without Icon",
     color: theme.palette.primary.dark,
   },
-  render: ({ label, color }) => (
+  render: ({ label, color, colorIcon }) => (
     <CustomIconTitle
       label={label}
       color={color}
+      colorIcon={colorIcon}
     />
   ),
 };
 
-export const WithRedIcon: Story = {
-  args: {
-    image: 'TitleIcon',
-    label: "Label with Red Icon",
-    color: theme.palette.error.dark,
-  },
-  render: ({ image, label, color }) => {
-    const icon = getImage(image as 'TitleIcon' | 'AddFilesIcon', theme.palette.error.main);
-    return (
-      <CustomIconTitle
-        image={icon}
-        label={label}
-        color={color}
-      />
-    );
-  },
-};
+
