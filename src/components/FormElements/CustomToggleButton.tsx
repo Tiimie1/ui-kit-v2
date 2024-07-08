@@ -36,7 +36,7 @@ const CustomToggleButton: React.FC<CustomToggleButtonProps> = ({
     [`& .${toggleButtonGroupClasses.grouped}`]: {
       margin: theme.spacing(0.5),
       border: 0,
-      borderRadius: "4px",
+      borderRadius: theme.shape.borderRadius,
       [`&.${toggleButtonGroupClasses.disabled}`]: {
         border: 0,
       },
@@ -58,7 +58,7 @@ const CustomToggleButton: React.FC<CustomToggleButtonProps> = ({
         sx={{
           display: "flex",
           border: `1px solid ${theme.palette.grey[300]}`,
-          borderRadius: theme.shape.borderRadius,
+          borderRadius: "4px",
         }}
       >
         <StyledToggleButtonGroup
