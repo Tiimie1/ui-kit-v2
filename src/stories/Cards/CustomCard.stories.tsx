@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from '@storybook/test';
-import CustomCard from "@/components/CustomCard";
+import CustomCard from "@/components/Cards/CustomCard";
 import CommunityIcon from "@/Icons/communityIcon";
 
 const meta: Meta<typeof CustomCard> = {
-  title: "CustomCard",
+  title: "Cards/CustomCard",
   component: CustomCard,
   parameters: {
     layout: 'centered',

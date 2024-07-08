@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import CardWithHover from "@/components/CustomCardWithHover";
+import CardWithHover from "@/components/Cards/CustomCardWithHover";
 
 const meta: Meta<typeof CardWithHover> = {
-  title: "CardWithHover",
+  title: "Cards/CardWithHover",
   component: CardWithHover,
   argTypes: {
     onClick: { action: 'clicked' },

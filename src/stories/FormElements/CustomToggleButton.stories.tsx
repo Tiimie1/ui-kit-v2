@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import CustomToggleButton from "@/components/CustomToggleButton";
+import CustomToggleButton from "@/components/FormElements/CustomToggleButton";
 import { Wrapper } from "./Wrapper";
 
 const meta: Meta<typeof CustomToggleButton> = {
-  title: "CustomToggleButton",
+  title: "FormElements/CustomToggleButton",
   component: CustomToggleButton,
   parameters: {
     layout: "centered",

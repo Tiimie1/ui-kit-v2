@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material/styles';
 import CreateBtnIcon from '@/Icons/createBtnIcon';
-import CustomTooltip from '@/components/CustomTooltip';
+import CustomTooltip from './CustomTooltip';
 
 interface CustomCreateButtonProps {
   label: string;

@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import CustomDropzoneBox from "@/components/CustomDropzoneBox";
+import CustomDropzoneBox from "@/components/FormElements/CustomDropzoneBox";
 import { Wrapper } from "./Wrapper";
 import theme from "@/styles/theme";
 
 const meta: Meta<typeof CustomDropzoneBox> = {
-  title: "CustomDropzoneBox",
+  title: "FormElements/CustomDropzoneBox",
   component: CustomDropzoneBox,
   parameters: {
     layout: "centered",

@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import CustomTooltip from "@/components/CustomTooltip";
+import CustomTooltip from "@/components/FormElements/CustomTooltip";
 
 const meta: Meta<typeof CustomTooltip> = {
-  title: "CustomTooltip",
+  title: "FormElements/CustomTooltip",
   component: CustomTooltip,
   parameters: {
     layout: "centered",

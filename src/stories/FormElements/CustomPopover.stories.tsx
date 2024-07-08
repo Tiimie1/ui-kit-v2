@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import CustomPopover from "@/components/CustomPopover";
+import CustomPopover from "@/components/FormElements/CustomPopover";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 
 const meta: Meta<typeof CustomPopover> = {
-  title: "CustomPopover",
+  title: "FormElements/CustomPopover",
   component: CustomPopover,
   parameters: {
     layout: "centered",
