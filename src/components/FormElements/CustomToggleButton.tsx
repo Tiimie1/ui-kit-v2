@@ -36,15 +36,16 @@ const CustomToggleButton: React.FC<CustomToggleButtonProps> = ({
     [`& .${toggleButtonGroupClasses.grouped}`]: {
       margin: theme.spacing(0.5),
       border: 0,
-      borderRadius: theme.shape.borderRadius,
+      borderRadius: "4px",
       [`&.${toggleButtonGroupClasses.disabled}`]: {
         border: 0,
       },
     },
-    [`& .${toggleButtonGroupClasses.middleButton},& .${toggleButtonGroupClasses.lastButton}`]: {
-      marginLeft: -1,
-      borderLeft: "1px solid transparent",
-    },
+    [`& .${toggleButtonGroupClasses.middleButton},& .${toggleButtonGroupClasses.lastButton}`]:
+      {
+        marginLeft: -1,
+        borderLeft: "1px solid transparent",
+      },
   }));
 
   return (
